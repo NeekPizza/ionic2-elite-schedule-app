@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Events } from 'ionic-angular';
-// import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-// import * as _ from 'lodash';
 
 @Injectable()
 export class UserSettings {
@@ -10,19 +8,9 @@ export class UserSettings {
 
   constructor(
     private events: Events,
-    // private sqlite: SQLite,
     public storage: Storage
 
-  ) {
-
-    // this.sqlite.create({
-    //   name: 'data.db',
-    //   location: 'default'
-    // }).then((db: SQLiteObject) => {
-    //   console.log(`HERE IS THE DB: ${db}`)
-    // })
-
-  }
+  ) {}
 
   favoriteTeam(team, tournamentId, tournamentName){
     let item = { team: team, tournamentId: tournamentId, tournamentName: tournamentName };

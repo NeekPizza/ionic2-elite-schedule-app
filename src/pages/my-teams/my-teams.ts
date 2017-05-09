@@ -25,7 +25,12 @@ export class MyTeams {
 
   ionViewWillEnter() {
     console.log('ionViewDidLoad MyTeams');
+
+    ///Un-comment to clear DB:///
+
     // this.userSettings.clearAll();
+
+    /////////////////////////////
     this.favorites = this.userSettings.getAllFavorites();
   }
 

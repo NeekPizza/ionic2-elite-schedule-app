@@ -7,9 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
 import { EliteApi } from './shared/shared';
 import { IonicStorageModule } from '@ionic/storage';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
-// import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -20,7 +18,6 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
     HttpModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    // AgmCoreModule.forRoot({apiKey: '{your-api-key-here}'}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,7 +27,6 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
     StatusBar,
     SplashScreen,
     EliteApi,
-    SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ],
 })
