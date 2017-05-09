@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Map</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="map-page" padding>
+
+  <ion-fab left bottom>
+   <button ion-fab class="fab-map" (click)="getDirections()">
+     <ion-icon name="navigate"></ion-icon>
+   </button>
+  </ion-fab>
+  <agm-map id="map" [longitude]="map.lng" [latitude]="map.lat" [zoom]="map.zoom">
+    <agm-marker [longitude]="map.lng" [latitude]="map.lat">
+      <agm-info-window>
+        <strong>{{map.markerLabel}}</strong>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+  
+</ion-content>
